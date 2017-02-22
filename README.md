@@ -1,6 +1,6 @@
 # simple-checkout
 
-This shop only sells apple and oranges.
+This shop only sells apples and oranges.
 
 
 <h3>Test</h3>

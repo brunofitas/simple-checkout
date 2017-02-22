@@ -18,8 +18,8 @@ class Checkout {
   def clear() : Unit =
     cart.clear
 
-  def total : BigDecimal =
-    cart.map(p => products(p).price).sum
+  def total =
+    cart.distinct.map(p => promos(products(p).promo.getOrElse("noPromo"))(cart.count(i => i == p)) * products(p).price).sum
 
   def output : String =
     s"£ ${"%.2f".format(total)}"
